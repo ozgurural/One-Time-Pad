@@ -48,7 +48,9 @@ size_t getInput(std::vector<char>& message)
         if (a == '\n') {
             break;
         }
-        message.push_back(a);
+        else if ((a >= 'A' && a <= 'Z') || (a >='a' && a <= 'z')) {
+            message.push_back(a); 
+        }
     }
     return message.size();
 }
