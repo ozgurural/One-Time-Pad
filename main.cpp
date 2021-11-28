@@ -67,10 +67,10 @@ void randomKeyGenerator() {
 
 void decryptMessage() {
     for (i = 0; i < length; i++) {
-        if ((encrypted_message[i] - p[i]) < 0) {
+        if ((encrypted_message[i] - p[i]) < ZERO) {
             decrpyted_message.push_back(static_cast<char>(encrypted_message[i] - p[i] + ALPHABETH_LENGTH));
         }
-        else if ((encrypted_message[i] - p[i]) >= 0) {
+        else if ((encrypted_message[i] - p[i]) >= ZERO) {
             decrpyted_message.push_back(static_cast<char>(encrypted_message[i] - p[i]));
         }
         else {
